@@ -153,6 +153,7 @@ curseforge {
 
 		relations {
       		requiredDependency "u-team-core"
+      		requiredDependency "industrial-craft"
     	}
 		
     	mainArtifact(jar) {
