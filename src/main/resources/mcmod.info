@@ -1,7 +1,7 @@
 [
 	{
 		"modid": "wtfic2addon",
-		"name": "HyCraftHDs WTF Ic2 Addon",
+		"name": "HyCraftHD's WTF Ic2 Addon",
 		"version": "${version}",
 		"mcversion": "${mcversion}",
 		"description": "Some OP stuff for endgame",

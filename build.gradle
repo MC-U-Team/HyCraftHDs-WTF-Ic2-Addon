@@ -122,6 +122,7 @@ sourceSets {
 dependencies {
 	compile "info.u-team:u_team_core-${minecraft.version}:${config.uteamcore.version}:dev"
 	compile "net.industrial-craft:industrialcraft-2:2.8.101-ex112:api"
+	deobfCompile "net.industrial-craft:industrialcraft-2:2.8.101-ex112"
 }
 
 processResources {

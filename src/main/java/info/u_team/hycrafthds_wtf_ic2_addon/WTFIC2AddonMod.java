@@ -21,6 +21,11 @@ public class WTFIC2AddonMod {
 	private static CommonProxy proxy;
 	
 	@EventHandler
+	public void preinit(FMLConstructionEvent event) {
+		proxy.construct(event);
+	}
+	
+	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
 		proxy.preinit(event);
 	}
