@@ -6,7 +6,7 @@ import ic2.core.block.*;
 import ic2.core.ref.TeBlock.*;
 import ic2.core.util.Util;
 import info.u_team.hycrafthds_wtf_ic2_addon.WTFIC2AddonConstants;
-import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.MyMachineTileEntity;
+import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.TileEntitySolarPanelBase;
 import info.u_team.u_team_core.util.CustomResourceLocation;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumRarity;
@@ -15,7 +15,7 @@ import net.minecraft.util.*;
 
 public enum WTFIC2AddonTe implements ITeBlock {
 	
-	solar_panel(MyMachineTileEntity.class, 0, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Generator, 5, 10, EnumRarity.COMMON);
+	solar_panel(TileEntitySolarPanelBase.class, 0, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Generator, 5, 10, EnumRarity.COMMON);
 	
 	public static final ResourceLocation IDENTITY = new ResourceLocation(WTFIC2AddonConstants.MODID, "te");
 	
