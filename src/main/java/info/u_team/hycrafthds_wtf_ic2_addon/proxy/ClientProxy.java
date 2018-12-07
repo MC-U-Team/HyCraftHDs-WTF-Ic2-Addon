@@ -1,5 +1,7 @@
 package info.u_team.hycrafthds_wtf_ic2_addon.proxy;
 
+import info.u_team.hycrafthds_wtf_ic2_addon.event.EventHandlerConfigChange;
+import info.u_team.u_team_core.registry.CommonRegistry;
 import net.minecraftforge.fml.common.event.*;
 
 public class ClientProxy extends CommonProxy {
@@ -17,6 +19,7 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init(FMLInitializationEvent event) {
 		super.init(event);
+		CommonRegistry.registerEventHandler(EventHandlerConfigChange.class);
 	}
 	
 	@Override
