@@ -10,7 +10,7 @@ public class EventHandlerRegisterTeBlock {
 	
 	@SubscribeEvent
 	public static void on(TeBlockFinalCallEvent event) {
-		TeBlockRegistry.addAll(WTFIC2AddonTe.class, WTFIC2AddonTe.IDENTITY);
+		TeBlockRegistry.addAll(WTFIC2AddonTes.class, WTFIC2AddonTes.IDENTITY);
 		TeBlockRegistry.addCreativeRegisterer((list, tile, itemblock, tab) -> {
 			if (tab == WTFIC2AddonCreativeTabs.tab || tab == CreativeTabs.SEARCH) {
 				tile.getAllTypes().forEach(type -> {
@@ -19,7 +19,7 @@ public class EventHandlerRegisterTeBlock {
 					}
 				});
 			}
-		}, WTFIC2AddonTe.IDENTITY);
+		}, WTFIC2AddonTes.IDENTITY);
 	}
 	
 }

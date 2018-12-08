@@ -1,1 +1,11 @@
 itemGroup.wtfic2addon:tab=HyCraftHD's WTF Ic2 Addon
+
+wtfic2addon.te.solar_panel_low=Low Solar Panel
+
+
+wtfic2addon:gui.energy=Energy
+wtfic2addon:gui.state=State
+
+wtfic2addon:gui.text.storage=Storage: %s EU / %s EU
+wtfic2addon:gui.text.generate=Generating: %s EU/t
+wtfic2addon:gui.text.output=Max Output: %s EU/t

@@ -24,7 +24,7 @@ public class ConfigEntrySolarPanel {
 	@Name("Capacity")
 	public double capacity;
 	
-	public ConfigEntrySolarPanel(int generateDay, int generateNight, int tier, int output, int capacity) {
+	public ConfigEntrySolarPanel(int generateDay, int generateNight, int tier, int output, double capacity) {
 		this.generateDay = generateDay;
 		this.generateNight = generateNight;
 		this.tier = tier;

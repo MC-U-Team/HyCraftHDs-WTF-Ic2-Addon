@@ -11,13 +11,14 @@ import ic2.core.block.invslot.InvSlotCharge;
 import ic2.core.gui.dynamic.*;
 import ic2.core.init.Localization;
 import ic2.core.network.GuiSynced;
+import info.u_team.hycrafthds_wtf_ic2_addon.WTFIC2AddonConstants;
 import info.u_team.hycrafthds_wtf_ic2_addon.config.ConfigEntrySolarPanel;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumFacing;
+import net.minecraft.util.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.relauncher.*;
 
@@ -32,7 +33,7 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	private GenerateState state = GenerateState.NONE;
 	
 	@GuiSynced
-	private double storage;
+	public double storage; // Hate public here, but cause of xml gui we need this public
 	
 	private int packetAmount;
 	
@@ -114,18 +115,24 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 		}
 		ticker++;
 		state.addEnergy(this, type);
-		chargeSlot.charge(storage);
+		if (storage > 0) {
+			drawEnergy(chargeSlot.charge(storage));
+		}
 	}
 	
 	private void canGenerate() {
-		if (world.canBlockSeeSky(pos.up())) {
-			if (world.isDaytime() && !world.isRainingAt(pos.up())) {
-				state = GenerateState.DAY;
-			} else {
-				state = GenerateState.NIGHT;
-			}
-		} else {
+		if (storage >= type.capacity) {
 			state = GenerateState.NONE;
+		} else {
+			if (world.canBlockSeeSky(pos.up())) {
+				if (world.isDaytime() && !world.isRainingAt(pos.up())) {
+					state = GenerateState.DAY;
+				} else {
+					state = GenerateState.NIGHT;
+				}
+			} else {
+				state = GenerateState.NONE;
+			}
 		}
 	}
 	
@@ -158,17 +165,53 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	
 	@Override
 	public ContainerBase<?> getGuiContainer(EntityPlayer player) {
-		return DynamicContainer.create(this, player, GuiParser.parse(teBlock));
+		try {
+			return DynamicContainer.create(this, player, GuiParser.parse(new ResourceLocation(WTFIC2AddonConstants.MODID, "guidef/solar_panel.xml"), teBlock.getTeClass()));
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return null;
 	}
 	
 	@SideOnly(Side.CLIENT)
 	@Override
 	public GuiScreen getGui(EntityPlayer player, boolean b) {
-		return DynamicGui.create(this, player, GuiParser.parse(teBlock));
+		try {
+			return DynamicGui.create(this, player, GuiParser.parse(new ResourceLocation(WTFIC2AddonConstants.MODID, "guidef/solar_panel.xml"), teBlock.getTeClass()));
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return null;
 	}
 	
 	@Override
 	public void onGuiClosed(EntityPlayer player) {
+	}
+	
+	// gui display methods
+	
+	public String getStorageText() {
+		return Localization.translate("wtfic2addon:gui.text.storage", (int) storage, (int) type.capacity);
+	}
+	
+	public String getGeneratingText() {
+		final int generation;
+		switch (state) {
+		case DAY:
+			generation = type.generateDay;
+			break;
+		case NIGHT:
+			generation = type.generateNight;
+			break;
+		default:
+			generation = 0;
+			break;
+		}
+		return Localization.translate("wtfic2addon:gui.text.generate", generation);
+	}
+	
+	public String getOutputText() {
+		return Localization.translate("wtfic2addon:gui.text.output", type.output);
 	}
 	
 	// generation

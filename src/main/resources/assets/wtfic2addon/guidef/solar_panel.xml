@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gui width="176" height="166">
+<gui width="300" height="180">
 	<text y="6" align="center">%name%</text>
 
-	<slot name="charge" x="79" y="25" />
-	
-	<gauge name="progress" x="80" y="55" style="progressdrop"/>
-	
-	<only if="night">
-		<image x="81" y="45" width="14" src="textures/gui/overlay/solar_sun" />
-	</only>
-	<only if="day">
-		<image x="81" y="45" u="14" width="14" src="textures/gui/overlay/solar_sun" />
-	</only>
+	<slot name="charge" x="12" y="55" />
 
-	<playerInventory x="7" y="83" />
+	<text y="24" x="70">%base.getStorageText()%</text>
+	<text y="41" x="70">%base.getGeneratingText()%</text>
+	<text y="58" x="70">%base.getOutputText()%</text>
+
+	<tooltip text="wtfic2addon:gui.energy">
+		<gauge name="progress" x="15" y="26" style="wtf_solarpanel_progress" />
+	</tooltip>
+
+	<tooltip text="wtfic2addon:gui.state">
+		<image x="31" y="57" width="14" src="wtfic2addon:textures/gui/overlay/solar_state" />
+		<only if="night">
+			<image x="31" y="57" u="14" width="14" src="wtfic2addon:textures/gui/overlay/solar_state" />
+		</only>
+		<only if="day">
+			<image x="31" y="57" u="28" width="14" src="wtfic2addon:textures/gui/overlay/solar_state" />
+		</only>
+	</tooltip>
+
+	<playerInventory x="69" y="97" />
 </gui>

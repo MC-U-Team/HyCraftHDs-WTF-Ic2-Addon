@@ -2,8 +2,8 @@
 	"forge_marker": 1,
 	"variants": {
 		"type": {
-			"solar_panel": { "model": "ic2:generator/electric/solar_generator" },
-			"solar_panel_active": { "model": "ic2:generator/electric/solar_generator" }
+			"solar_panel_low": { "model": "ic2:generator/electric/solar_generator" },
+			"solar_panel_low_active": { "model": "ic2:generator/electric/solar_generator" }
 		},
 		"facing": {
 			"down": { "x": 90 },

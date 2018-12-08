@@ -9,7 +9,7 @@ public class WTFIC2AddonCreativeTabs {
 	public static final UCreativeTab tab = new UCreativeTab(WTFIC2AddonConstants.MODID, "tab");
 	
 	public static void init() {
-		BlockTileEntity block = TeBlockRegistry.get(WTFIC2AddonTe.IDENTITY);
+		BlockTileEntity block = TeBlockRegistry.get(WTFIC2AddonTes.IDENTITY);
 		tab.setIcon(block);
 	}
 	

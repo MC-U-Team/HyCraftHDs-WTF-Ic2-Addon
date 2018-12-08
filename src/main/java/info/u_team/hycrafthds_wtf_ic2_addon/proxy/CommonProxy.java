@@ -15,8 +15,9 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent event) {
-		WTFIC2AddonTe.buildDummies();
+		WTFIC2AddonTes.buildDummies();
 		WTFIC2AddonCreativeTabs.init();
+		WTFIC2AddonGauges.init();
 	}
 	
 	public void postinit(FMLPostInitializationEvent event) {
