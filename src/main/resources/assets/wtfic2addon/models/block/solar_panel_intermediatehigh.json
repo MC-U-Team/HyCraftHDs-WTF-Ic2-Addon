@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"side": "wtfic2addon:blocks/solar_panel_sides",
+		"bottom": "wtfic2addon:blocks/solar_panel_bottom",
+		"top": "wtfic2addon:blocks/solar_panel_top_intermediatehigh"
+	}
+}

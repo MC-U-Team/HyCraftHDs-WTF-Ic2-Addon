@@ -4,9 +4,9 @@
 
 	<slot name="charge" x="12" y="55" />
 
-	<text y="24" x="70">%base.getStorageText()%</text>
-	<text y="41" x="70">%base.getGeneratingText()%</text>
-	<text y="58" x="70">%base.getOutputText()%</text>
+	<text y="24" x="61">%base.getStorageText()%</text>
+	<text y="41" x="61">%base.getGeneratingText()%</text>
+	<text y="58" x="61">%base.getOutputText()%</text>
 
 	<tooltip text="wtfic2addon:gui.energy">
 		<gauge name="progress" x="15" y="26" style="wtf_solarpanel_progress" />

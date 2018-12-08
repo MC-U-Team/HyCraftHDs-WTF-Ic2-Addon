@@ -2,6 +2,20 @@ itemGroup.wtfic2addon:tab=HyCraftHD's WTF Ic2 Addon
 
 wtfic2addon.te.solar_panel_low=Low Solar Panel
 
+wtfic2addon.te.solar_panel_intermediatelow=Intermediate Low Solar Panel
+wtfic2addon.te.solar_panel_intermediatemedium=Intermediate Medium Solar Panel
+wtfic2addon.te.solar_panel_intermediatehigh=Intermediate High Solar Panel
+
+wtfic2addon.te.solar_panel_advancedlow=Advanced Low Solar Panel
+wtfic2addon.te.solar_panel_advancedmedium=Advanced Medium Solar Panel
+wtfic2addon.te.solar_panel_advancedhigh=Advanced High Solar Panel
+
+wtfic2addon.te.solar_panel_superior=Superior Solar Panel
+
+wtfic2addon.te.solar_panel_intermediatewtf=Intermediate WTF Solar Panel
+wtfic2addon.te.solar_panel_advancedwtf=Advanced WTF Solar Panel
+wtfic2addon.te.solar_panel_extremewtf=§d§kExtreme WTF Solar Panel§r
+
 
 wtfic2addon:gui.energy=Energy
 wtfic2addon:gui.state=State

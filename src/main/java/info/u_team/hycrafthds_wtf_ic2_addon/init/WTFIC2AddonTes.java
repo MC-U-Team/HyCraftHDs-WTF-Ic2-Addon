@@ -6,7 +6,7 @@ import ic2.core.block.*;
 import ic2.core.ref.TeBlock.*;
 import ic2.core.util.Util;
 import info.u_team.hycrafthds_wtf_ic2_addon.WTFIC2AddonConstants;
-import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.TileEntitySolarPanelLow;
+import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.*;
 import info.u_team.u_team_core.util.CustomResourceLocation;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumRarity;
@@ -15,7 +15,21 @@ import net.minecraft.util.*;
 
 public enum WTFIC2AddonTes implements ITeBlock {
 	
-	solar_panel_low(TileEntitySolarPanelLow.class, 0, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Generator, 5, 10, EnumRarity.COMMON);
+	solar_panel_low(TileEntitySolarPanelLow.class, 0, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.COMMON),
+	
+	solar_panel_intermediatelow(TileEntitySolarPanelIntermediateLow.class, 1, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.UNCOMMON),
+	solar_panel_intermediatemedium(TileEntitySolarPanelIntermediateMedium.class, 2, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.UNCOMMON),
+	solar_panel_intermediatehigh(TileEntitySolarPanelIntermediateHigh.class, 3, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.UNCOMMON),
+	
+	solar_panel_advancedlow(TileEntitySolarPanelAdvancedLow.class, 4, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	solar_panel_advancedmedium(TileEntitySolarPanelAdvancedMedium.class, 5, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	solar_panel_advancedhigh(TileEntitySolarPanelAdvancedHigh.class, 6, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	
+	solar_panel_superior(TileEntitySolarPanelSuperior.class, 7, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	
+	solar_panel_intermediatewtf(TileEntitySolarPanelIntermediateWTF.class, 8, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC),
+	solar_panel_advancedwtf(TileEntitySolarPanelAdvancedWTF.class, 9, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC),
+	solar_panel_extremewtf(TileEntitySolarPanelExtremeWTF.class, 10, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC);
 	
 	public static final ResourceLocation IDENTITY = new ResourceLocation(WTFIC2AddonConstants.MODID, "te");
 	

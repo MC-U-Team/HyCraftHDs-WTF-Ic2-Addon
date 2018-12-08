@@ -35,7 +35,7 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	private GenerateState state = GenerateState.NONE;
 	
 	@GuiSynced
-	public double storage; // Hate public here, but cause of xml gui we need this public
+	private double storage;
 	
 	private int packetAmount;
 	
@@ -193,7 +193,7 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	// gui display methods
 	
 	public String getStorageText() {
-		return Localization.translate("wtfic2addon:gui.text.storage", (int) storage, (int) type.capacity);
+		return Localization.translate("wtfic2addon:gui.text.storage", (long) storage, (long) type.capacity);
 	}
 	
 	public String getGeneratingText() {

@@ -21,5 +21,4 @@ public class EventHandlerRegisterTeBlock {
 			}
 		}, WTFIC2AddonTes.IDENTITY);
 	}
-	
 }
