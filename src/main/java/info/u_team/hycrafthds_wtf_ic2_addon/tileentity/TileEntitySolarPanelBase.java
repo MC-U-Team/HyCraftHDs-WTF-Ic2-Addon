@@ -24,6 +24,8 @@ import net.minecraftforge.fml.relauncher.*;
 
 public class TileEntitySolarPanelBase extends TileEntityInventory implements IHasGui, IGuiValueProvider, IMultiEnergySource {
 	
+	protected static final ResourceLocation GUILOC = new ResourceLocation(WTFIC2AddonConstants.MODID, "guidef/solar_panel.xml");
+	
 	protected final ConfigEntrySolarPanel type;
 	protected final InvSlotCharge chargeSlot;
 	
@@ -166,9 +168,9 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	@Override
 	public ContainerBase<?> getGuiContainer(EntityPlayer player) {
 		try {
-			return DynamicContainer.create(this, player, GuiParser.parse(new ResourceLocation(WTFIC2AddonConstants.MODID, "guidef/solar_panel.xml"), teBlock.getTeClass()));
+			return DynamicContainer.create(this, player, GuiParser.parse(GUILOC, teBlock.getTeClass()));
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			WTFIC2AddonConstants.LOGGER.catching(ex);
 		}
 		return null;
 	}
@@ -177,9 +179,9 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	@Override
 	public GuiScreen getGui(EntityPlayer player, boolean b) {
 		try {
-			return DynamicGui.create(this, player, GuiParser.parse(new ResourceLocation(WTFIC2AddonConstants.MODID, "guidef/solar_panel.xml"), teBlock.getTeClass()));
+			return DynamicGui.create(this, player, GuiParser.parse(GUILOC, teBlock.getTeClass()));
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			WTFIC2AddonConstants.LOGGER.catching(ex);
 		}
 		return null;
 	}

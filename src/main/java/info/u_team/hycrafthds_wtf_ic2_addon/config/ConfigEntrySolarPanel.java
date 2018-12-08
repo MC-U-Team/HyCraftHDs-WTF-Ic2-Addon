@@ -4,24 +4,19 @@ import net.minecraftforge.common.config.Config.*;
 
 public class ConfigEntrySolarPanel {
 	
-	@Comment("How much the solarpanel should generate when its day")
-	@Name("Generate Day")
+	@Name("Generation Day")
 	public int generateDay;
 	
-	@Comment("How much the solarpanel should generate when its night")
-	@Name("Generate Night")
+	@Name("Generation Night")
 	public int generateNight;
 	
-	@Comment("The energy tier")
-	@Name("Tier")
+	@Name("Energy Tier")
 	public int tier;
 	
-	@Comment("How much energy can be extracted per tick")
-	@Name("Output Energy")
+	@Name("Energy Output")
 	public int output;
 	
-	@Comment("How much energy this solarpanel can store")
-	@Name("Capacity")
+	@Name("Energy Capacity")
 	public double capacity;
 	
 	public ConfigEntrySolarPanel(int generateDay, int generateNight, int tier, int output, double capacity) {
