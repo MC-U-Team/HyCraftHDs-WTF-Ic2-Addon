@@ -17,9 +17,25 @@ wtfic2addon.te.solar_panel_advancedwtf=Advanced WTF Solar Panel
 wtfic2addon.te.solar_panel_extremewtf=§d§kExtreme WTF Solar Panel§r
 
 
+wtfic2addon.te.mfsu_compressed=Compressed MFSU
+wtfic2addon.te.mfsu_doublecompressed=Double Compressed MFSU
+wtfic2addon.te.mfsu_triplecompressed=Triple Compressed MFSU
+wtfic2addon.te.mfsu_quadruplecompressed=Quadruple Compressed MFSU
+
+wtfic2addon.te.mfsu_extreme=§d§kExtreme MFSU§r
+
+wtfic2addon.te.mfsu_convertable=Transformer MFSU
+
+wtfic2addon:mfsu_convertable.use=Accepts every tier, but outputs tier 1
+
+wtfic2addon:tooltip.solarpanel.generateDay=Generate Day :
+wtfic2addon:tooltip.solarpanel.generateNight=Generate Night :
+
 wtfic2addon:gui.energy=Energy
 wtfic2addon:gui.state=State
 
 wtfic2addon:gui.text.storage=Storage: %s EU / %s EU
+wtfic2addon:gui.text.storageLong=Storage: %s EU
+wtfic2addon:gui.text.capacity=Capacity: %s EU
 wtfic2addon:gui.text.generate=Generating: %s EU/t
 wtfic2addon:gui.text.output=Max Output: %s EU/t

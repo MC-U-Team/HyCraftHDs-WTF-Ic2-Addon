@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gui width="300" height="180">
+	<text y="6" align="center">%name%</text>
+
+	<slot name="charge" x="12" y="25" />
+	<slot name="discharge" x="12" y="67" />
+
+	<energygauge x="16" y="50" style="bar" />
+
+	<text y="31" x="54">%base.getStorageText()%</text>
+	<text y="46" x="54">%base.getCapacityText()%</text>
+	<text y="61" x="54">%base.getOutputText()%</text>
+
+	<playerInventory x="69" y="97" />
+</gui>

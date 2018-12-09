@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "wtfic2addon:blocks/energy_storage_leftrightback_compressed",
+		"down": "wtfic2addon:blocks/energy_storage_bottomtop_compressed",
+		"up": "wtfic2addon:blocks/energy_storage_bottomtop_compressed",
+		"north": "wtfic2addon:blocks/energy_storage_front_compressed",
+		"east": "wtfic2addon:blocks/energy_storage_leftrightback_compressed",
+		"south": "wtfic2addon:blocks/energy_storage_leftrightback_compressed",
+		"west": "wtfic2addon:blocks/energy_storage_leftrightback_compressed"
+	}
+}

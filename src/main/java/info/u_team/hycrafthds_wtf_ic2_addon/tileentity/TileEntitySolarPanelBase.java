@@ -138,12 +138,6 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 		}
 	}
 	
-	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, List<String> tooltip, ITooltipFlag advanced) {
-		super.addInformation(stack, tooltip, advanced);
-		tooltip.add(Localization.translate("ic2.item.tooltip.PowerTier", type.tier));
-	}
-	
 	// Gui
 	
 	@Override
@@ -188,6 +182,13 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	
 	@Override
 	public void onGuiClosed(EntityPlayer player) {
+	}
+	
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, List<String> tooltip, ITooltipFlag advanced) {
+		super.addInformation(stack, tooltip, advanced);
+		tooltip.add(Localization.translate("ic2.item.tooltip.PowerTier", type.tier));
+		tooltip.add(String.format("%s %s %s %s %s %s", Localization.translate("wtfic2addon:tooltip.solarpanel.generateDay"), (long) type.generateDay, Localization.translate("ic2.generic.text.EUt"), Localization.translate("wtfic2addon:tooltip.solarpanel.generateNight"), (long) type.generateNight, Localization.translate("ic2.generic.text.EUt")));
 	}
 	
 	// gui display methods

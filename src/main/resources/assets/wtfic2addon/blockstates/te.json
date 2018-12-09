@@ -33,7 +33,16 @@
 			"solar_panel_advancedwtf_active": { "model": "wtfic2addon:solar_panel_advancedwtf" },
 			
 			"solar_panel_extremewtf": { "model": "wtfic2addon:solar_panel_extremewtf" },
-			"solar_panel_extremewtf_active": { "model": "wtfic2addon:solar_panel_extremewtf" }
+			"solar_panel_extremewtf_active": { "model": "wtfic2addon:solar_panel_extremewtf" },
+			
+			"mfsu_compressed": { "model": "wtfic2addon:mfsu_compressed" },
+			"mfsu_doublecompressed": { "model": "wtfic2addon:mfsu_doublecompressed" },
+			"mfsu_triplecompressed": { "model": "wtfic2addon:mfsu_triplecompressed" },
+			"mfsu_quadruplecompressed": { "model": "wtfic2addon:mfsu_quadruplecompressed" },
+			
+			"mfsu_extreme": { "model": "wtfic2addon:mfsu_extreme" },
+			
+			"mfsu_convertable": { "model": "wtfic2addon:mfsu_convertable" }
 		},
 		"facing": {
 			"down": { "x": 90 },

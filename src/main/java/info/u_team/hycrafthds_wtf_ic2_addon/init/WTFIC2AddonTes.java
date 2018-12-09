@@ -6,7 +6,8 @@ import ic2.core.block.*;
 import ic2.core.ref.TeBlock.*;
 import ic2.core.util.Util;
 import info.u_team.hycrafthds_wtf_ic2_addon.WTFIC2AddonConstants;
-import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.*;
+import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.energystorage.*;
+import info.u_team.hycrafthds_wtf_ic2_addon.tileentity.solarpanel.*;
 import info.u_team.u_team_core.util.CustomResourceLocation;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumRarity;
@@ -29,7 +30,16 @@ public enum WTFIC2AddonTes implements ITeBlock {
 	
 	solar_panel_intermediatewtf(TileEntitySolarPanelIntermediateWTF.class, 8, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC),
 	solar_panel_advancedwtf(TileEntitySolarPanelAdvancedWTF.class, 9, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC),
-	solar_panel_extremewtf(TileEntitySolarPanelExtremeWTF.class, 10, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC);
+	solar_panel_extremewtf(TileEntitySolarPanelExtremeWTF.class, 10, true, Util.horizontalFacings, false, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC),
+	
+	mfsu_compressed(TileEntityEnergyStorageCompressedMFSU.class, 11, false, Util.allFacings, true, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	mfsu_doublecompressed(TileEntityEnergyStorageDoubleCompressedMFSU.class, 12, false, Util.allFacings, true, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	mfsu_triplecompressed(TileEntityEnergyStorageTripleCompressedMFSU.class, 13, false, Util.allFacings, true, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	mfsu_quadruplecompressed(TileEntityEnergyStorageQuadrupleCompressedMFSU.class, 14, false, Util.allFacings, true, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.RARE),
+	
+	mfsu_extreme(TileEntityEnergyStorageExtremeMFSU.class, 15, false, Util.allFacings, true, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC),
+	
+	mfsu_convertable(TileEntityEnergyStorageConvertableMFSU.class, 16, false, Util.allFacings, true, HarvestTool.Pickaxe, DefaultDrop.Self, 5, 10, EnumRarity.EPIC);
 	
 	public static final ResourceLocation IDENTITY = new ResourceLocation(WTFIC2AddonConstants.MODID, "te");
 	
