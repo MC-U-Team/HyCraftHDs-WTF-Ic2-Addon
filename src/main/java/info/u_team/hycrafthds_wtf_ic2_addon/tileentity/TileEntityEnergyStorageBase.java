@@ -102,8 +102,13 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 	
 	protected ItemStack adjustDrop(ItemStack drop, boolean wrench) {
 		drop = super.adjustDrop(drop, wrench);
-		if (wrench || teBlock.getDefaultDrop() == DefaultDrop.Self) {
-			double retainedRatio = ConfigUtil.getDouble(MainConfig.get(), "balance/energyRetainedInStorageBlockDrops");
+		if (teBlock.getDefaultDrop() == DefaultDrop.Self) {
+			double retainedRatio;
+			if (wrench) {
+				retainedRatio = 1;
+			} else {
+				retainedRatio = ConfigUtil.getDouble(MainConfig.get(), "balance/energyRetainedInStorageBlockDrops");
+			}
 			double totalEnergy = energy.getEnergy();
 			if (retainedRatio > 0.0D && totalEnergy > 0.0D) {
 				NBTTagCompound nbt = StackUtil.getOrCreateNbtData(drop);
