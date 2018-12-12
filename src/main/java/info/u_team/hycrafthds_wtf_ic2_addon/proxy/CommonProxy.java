@@ -18,6 +18,7 @@ public class CommonProxy {
 		WTFIC2AddonTes.buildDummies();
 		WTFIC2AddonCreativeTabs.init();
 		WTFIC2AddonGauges.init();
+		WTFIC2AddonRecipes.init();
 	}
 	
 	public void postinit(FMLPostInitializationEvent event) {

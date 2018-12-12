@@ -16,6 +16,10 @@ public class CommonConfig {
 	@Comment("Energy storage config")
 	public static EnergyStorage energystorage = new EnergyStorage();
 	
+	@RequiresMcRestart
+	@Comment("Enable and disable recipes")
+	public static Recipes recipes = new Recipes();
+	
 	public static class SolarPanel {
 		
 		public ConfigEntrySolarPanel low = new ConfigEntrySolarPanel(16, 8, 1, 32, 1e4);
@@ -39,16 +43,30 @@ public class CommonConfig {
 	public static class EnergyStorage {
 		
 		public ConfigEntryEnergyStorage compressedmfsu = new ConfigEntryEnergyStorage(36e7, 18_432, 4);
-		
 		public ConfigEntryEnergyStorage doublecompressedmfsu = new ConfigEntryEnergyStorage(324e7, 165_888, 4);
-		
 		public ConfigEntryEnergyStorage triplecompressedmfsu = new ConfigEntryEnergyStorage(2916e7, 1_492_992, 4);
-		
 		public ConfigEntryEnergyStorage quadruplecompressedmfsu = new ConfigEntryEnergyStorage(26244e7, 13_436_928, 4);
 		
 		public ConfigEntryEnergyStorage extrememfsu = new ConfigEntryEnergyStorage(Long.MAX_VALUE, 1e12, 5);
 		
 		public ConfigEntryEnergyStorage convertablemfsu = new ConfigEntryEnergyStorage(1e8, 1e7, 1);
+	}
+	
+	public static class Recipes {
+		
+		public Crafting crafting = new Crafting();
+		
+		public class Crafting {
+			
+			public boolean enableCompressedMFSU = true;
+			public boolean enableDoubleCompressedMFSU = true;
+			public boolean enableTrippleCompressedMFSU = true;
+			public boolean enableQuadrupleCompressedMFSU = true;
+			
+			public boolean enableExtremeMFSU = true;
+			
+			public boolean enableConvertableMFSU = true;
+		}
 	}
 	
 }
