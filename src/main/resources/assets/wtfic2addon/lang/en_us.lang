@@ -1,5 +1,7 @@
+#Creative Tab
 itemGroup.wtfic2addon:tab=HyCraftHD's WTF Ic2 Addon
 
+#Tiles
 wtfic2addon.te.solar_panel_low=Low Solar Panel
 
 wtfic2addon.te.solar_panel_intermediatelow=Intermediate Low Solar Panel
@@ -26,6 +28,11 @@ wtfic2addon.te.mfsu_extreme=§d§kExtreme MFSU§r
 
 wtfic2addon.te.mfsu_convertable=Transformer MFSU
 
+#Item
+item.wtfic2addon:advanced_condensator_reflector.name=Extreme Condensator Reflector
+item.wtfic2addon:dense_iridium_reinforce_plate.name=Dense Iridium Reinforce Plate
+
+#Tooltips and Gui
 wtfic2addon:mfsu_convertable.use=Accepts every tier, but outputs tier 1
 
 wtfic2addon:tooltip.solarpanel.generateDay=Generate Day :

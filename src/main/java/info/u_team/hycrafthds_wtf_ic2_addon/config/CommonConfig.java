@@ -56,7 +56,28 @@ public class CommonConfig {
 		
 		public Crafting crafting = new Crafting();
 		
+		public UUMatterIndex uumatterindex = new UUMatterIndex();
+		
 		public class Crafting {
+			
+			public boolean enableExtremeCondensatorReflector = true;
+			public boolean enableDenseIridiumReinforcePlate = true;
+			
+			public boolean enableLowSolarpanel = true;
+			
+			public boolean enableIntermediateLowSolarpanel = true;
+			public boolean enableIntermediateMediumSolarpanel = true;
+			public boolean enableIntermediateHighSolarpanel = true;
+			
+			public boolean enableAdvancedLowSolarpanel = true;
+			public boolean enableAdvancedMediumSolarpanel = true;
+			public boolean enableAdvancedHighSolarpanel = true;
+			
+			public boolean enableSuperiorSolarpanel = true;
+			
+			public boolean enableIntermediateWTFSolarpanel = true;
+			public boolean enableAdvancedWTFSolarpanel = true;
+			public boolean enableExtremeWTFSolarpanel = true;
 			
 			public boolean enableCompressedMFSU = true;
 			public boolean enableDoubleCompressedMFSU = true;
@@ -66,6 +87,14 @@ public class CommonConfig {
 			public boolean enableExtremeMFSU = true;
 			
 			public boolean enableConvertableMFSU = true;
+		}
+		
+		public class UUMatterIndex {
+			
+			public double extremeMFSU = 500e5;
+			public double intermediateWTFSolarPanel = 10e5;
+			public double advancedWTFSolarPanel = 100e5;
+			public double extremeWTFSolarPanel = 500e5;
 		}
 	}
 	

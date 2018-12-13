@@ -12,6 +12,7 @@ public class CommonProxy {
 	}
 	
 	public void preinit(FMLPreInitializationEvent event) {
+		WTFIC2AddonItems.preinit();
 	}
 	
 	public void init(FMLInitializationEvent event) {
