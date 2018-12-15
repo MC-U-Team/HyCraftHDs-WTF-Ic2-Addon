@@ -115,8 +115,12 @@ artifacts {
 
 sourceSets {
    	main {
-		java
-		resources
+		java {
+			srcDirs += "src/integration/java"
+		}
+		resources {
+			srcDirs += "src/integration/resources"
+		}
    	}
 }
 
