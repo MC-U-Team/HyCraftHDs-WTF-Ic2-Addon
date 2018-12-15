@@ -5,13 +5,11 @@ import static info.u_team.hycrafthds_wtf_ic2_addon.init.WTFIC2AddonTes.*;
 import ic2.api.item.IC2Items;
 import ic2.api.recipe.Recipes;
 import ic2.core.block.*;
-import ic2.core.util.StackUtil;
 import ic2.core.uu.UuIndex;
 import info.u_team.hycrafthds_wtf_ic2_addon.config.CommonConfig;
-import info.u_team.hycrafthds_wtf_ic2_addon.util.ItemStackUtil;
+import info.u_team.hycrafthds_wtf_ic2_addon.util.*;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
 @SuppressWarnings("deprecation")
@@ -73,11 +71,7 @@ public class WTFIC2AddonRecipes {
 		if (CommonConfig.recipes.crafting.enableIntermediateWTFSolarpanel) {
 			UuIndex.instance.add(teBlock.getItemStack(solar_panel_intermediatewtf), CommonConfig.recipes.uumatterindex.intermediateWTFSolarPanel);
 			
-			ItemStack output = IC2Items.getItem("crystal_memory");
-			NBTTagCompound nbt = StackUtil.getOrCreateNbtData(output);
-			NBTTagCompound contentTag = new NBTTagCompound();
-			teBlock.getItemStack(solar_panel_intermediatewtf).writeToNBT(contentTag);
-			nbt.setTag("Pattern", contentTag);
+			ItemStack output = CrystalMemoryUtil.create(teBlock.getItemStack(solar_panel_intermediatewtf));
 			
 			Recipes.advRecipes.addRecipe(output, new Object[] { "***", "*C*", "*E*", '*', teBlock.getItemStack(solar_panel_superior), 'C', IC2Items.getItem("crafting", "raw_crystal_memory"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
@@ -85,11 +79,7 @@ public class WTFIC2AddonRecipes {
 		if (CommonConfig.recipes.crafting.enableAdvancedWTFSolarpanel) {
 			UuIndex.instance.add(teBlock.getItemStack(solar_panel_advancedwtf), CommonConfig.recipes.uumatterindex.advancedWTFSolarPanel);
 			
-			ItemStack output = IC2Items.getItem("crystal_memory");
-			NBTTagCompound nbt = StackUtil.getOrCreateNbtData(output);
-			NBTTagCompound contentTag = new NBTTagCompound();
-			teBlock.getItemStack(solar_panel_advancedwtf).writeToNBT(contentTag);
-			nbt.setTag("Pattern", contentTag);
+			ItemStack output = CrystalMemoryUtil.create(teBlock.getItemStack(solar_panel_advancedwtf));
 			
 			Recipes.advRecipes.addRecipe(output, new Object[] { "*N*", "*C*", "E*E", '*', teBlock.getItemStack(solar_panel_intermediatewtf), 'C', charging_lapotron_crystal.copy(), 'N', IC2Items.getItem("nuclear", "rtg_pellet"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
@@ -97,11 +87,7 @@ public class WTFIC2AddonRecipes {
 		if (CommonConfig.recipes.crafting.enableExtremeWTFSolarpanel) {
 			UuIndex.instance.add(teBlock.getItemStack(solar_panel_extremewtf), CommonConfig.recipes.uumatterindex.extremeWTFSolarPanel);
 			
-			ItemStack output = IC2Items.getItem("crystal_memory");
-			NBTTagCompound nbt = StackUtil.getOrCreateNbtData(output);
-			NBTTagCompound contentTag = new NBTTagCompound();
-			teBlock.getItemStack(solar_panel_extremewtf).writeToNBT(contentTag);
-			nbt.setTag("Pattern", contentTag);
+			ItemStack output = CrystalMemoryUtil.create(teBlock.getItemStack(solar_panel_extremewtf));
 			
 			Recipes.advRecipes.addRecipe(output, new Object[] { "E*E", "*C*", "E*E", '*', teBlock.getItemStack(solar_panel_advancedwtf), 'C', charging_lapotron_crystal.copy(), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
@@ -126,11 +112,7 @@ public class WTFIC2AddonRecipes {
 		if (CommonConfig.recipes.crafting.enableExtremeMFSU) {
 			UuIndex.instance.add(teBlock.getItemStack(mfsu_extreme), CommonConfig.recipes.uumatterindex.extremeMFSU);
 			
-			ItemStack output = IC2Items.getItem("crystal_memory");
-			NBTTagCompound nbt = StackUtil.getOrCreateNbtData(output);
-			NBTTagCompound contentTag = new NBTTagCompound();
-			teBlock.getItemStack(mfsu_extreme).writeToNBT(contentTag);
-			nbt.setTag("Pattern", contentTag);
+			ItemStack output = CrystalMemoryUtil.create(teBlock.getItemStack(mfsu_extreme));
 			
 			Recipes.advRecipes.addRecipe(output, new Object[] { "***", "*C*", "*E*", '*', teBlock.getItemStack(mfsu_quadruplecompressed), 'C', IC2Items.getItem("crafting", "raw_crystal_memory"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
