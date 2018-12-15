@@ -8,16 +8,25 @@ import ic2.core.block.*;
 import ic2.core.util.StackUtil;
 import ic2.core.uu.UuIndex;
 import info.u_team.hycrafthds_wtf_ic2_addon.config.CommonConfig;
+import info.u_team.hycrafthds_wtf_ic2_addon.util.ItemStackUtil;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.oredict.OreDictionary;
 
+@SuppressWarnings("deprecation")
 public class WTFIC2AddonRecipes {
 	
 	private static BlockTileEntity teBlock;
 	
 	public static void init() {
 		teBlock = TeBlockRegistry.get(IDENTITY);
+		
+		ItemStack re_battery = ItemStackUtil.copyStackWithNewMetadata(IC2Items.getItem("re_battery"), OreDictionary.WILDCARD_VALUE);
+		ItemStack advanced_re_battery = ItemStackUtil.copyStackWithNewMetadata(IC2Items.getItem("advanced_re_battery"), OreDictionary.WILDCARD_VALUE);
+		ItemStack energy_crystal = ItemStackUtil.copyStackWithNewMetadata(IC2Items.getItem("energy_crystal"), OreDictionary.WILDCARD_VALUE);
+		ItemStack lapotron_crystal = ItemStackUtil.copyStackWithNewMetadata(IC2Items.getItem("lapotron_crystal"), OreDictionary.WILDCARD_VALUE);
+		ItemStack charging_lapotron_crystal = ItemStackUtil.copyStackWithNewMetadata(IC2Items.getItem("charging_lapotron_crystal"), OreDictionary.WILDCARD_VALUE);
 		
 		// Items
 		if (CommonConfig.recipes.crafting.enableExtremeCondensatorReflector) {
@@ -34,31 +43,31 @@ public class WTFIC2AddonRecipes {
 		}
 		
 		if (CommonConfig.recipes.crafting.enableIntermediateLowSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_intermediatelow), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_low), 'X', Blocks.GLASS, 'S', IC2Items.getItem("re_battery") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_intermediatelow), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_low), 'X', Blocks.GLASS, 'S', re_battery.copy() });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableIntermediateMediumSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_intermediatemedium), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_intermediatelow), 'X', Blocks.GLASS, 'S', IC2Items.getItem("re_battery") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_intermediatemedium), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_intermediatelow), 'X', Blocks.GLASS, 'S', re_battery.copy() });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableIntermediateHighSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_intermediatehigh), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_intermediatemedium), 'X', Blocks.GLASS, 'S', IC2Items.getItem("advanced_re_battery") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_intermediatehigh), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_intermediatemedium), 'X', Blocks.GLASS, 'S', advanced_re_battery.copy() });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableAdvancedLowSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_advancedlow), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_intermediatehigh), 'X', Blocks.GLASS, 'S', IC2Items.getItem("energy_crystal") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_advancedlow), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_intermediatehigh), 'X', Blocks.GLASS, 'S', energy_crystal.copy() });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableAdvancedMediumSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_advancedmedium), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_advancedlow), 'X', Blocks.GLASS, 'S', IC2Items.getItem("energy_crystal") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_advancedmedium), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_advancedlow), 'X', Blocks.GLASS, 'S', energy_crystal.copy() });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableAdvancedHighSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_advancedhigh), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_advancedmedium), 'X', Blocks.GLASS, 'S', IC2Items.getItem("lapotron_crystal") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_advancedhigh), new Object[] { "XSX", "X*X", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_advancedmedium), 'X', Blocks.GLASS, 'S', lapotron_crystal.copy() });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableSuperiorSolarpanel) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_superior), new Object[] { "XSX", "E*E", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_advancedhigh), 'X', IC2Items.getItem("glass", "reinforced"), 'S', IC2Items.getItem("lapotron_crystal"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(solar_panel_superior), new Object[] { "XSX", "E*E", "#*#", '#', IC2Items.getItem("crafting", "advanced_circuit"), '*', teBlock.getItemStack(solar_panel_advancedhigh), 'X', IC2Items.getItem("glass", "reinforced"), 'S', lapotron_crystal.copy(), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableIntermediateWTFSolarpanel) {
@@ -82,7 +91,7 @@ public class WTFIC2AddonRecipes {
 			teBlock.getItemStack(solar_panel_advancedwtf).writeToNBT(contentTag);
 			nbt.setTag("Pattern", contentTag);
 			
-			Recipes.advRecipes.addRecipe(output, new Object[] { "*N*", "*C*", "E*E", '*', teBlock.getItemStack(solar_panel_intermediatewtf), 'C', IC2Items.getItem("charging_lapotron_crystal"), 'N', IC2Items.getItem("nuclear", "rtg_pellet"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
+			Recipes.advRecipes.addRecipe(output, new Object[] { "*N*", "*C*", "E*E", '*', teBlock.getItemStack(solar_panel_intermediatewtf), 'C', charging_lapotron_crystal.copy(), 'N', IC2Items.getItem("nuclear", "rtg_pellet"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
 		
 		if (CommonConfig.recipes.crafting.enableExtremeWTFSolarpanel) {
@@ -94,7 +103,7 @@ public class WTFIC2AddonRecipes {
 			teBlock.getItemStack(solar_panel_extremewtf).writeToNBT(contentTag);
 			nbt.setTag("Pattern", contentTag);
 			
-			Recipes.advRecipes.addRecipe(output, new Object[] { "E*E", "*C*", "E*E", '*', teBlock.getItemStack(solar_panel_advancedwtf), 'C', IC2Items.getItem("charging_lapotron_crystal"), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
+			Recipes.advRecipes.addRecipe(output, new Object[] { "E*E", "*C*", "E*E", '*', teBlock.getItemStack(solar_panel_advancedwtf), 'C', charging_lapotron_crystal.copy(), 'E', WTFIC2AddonItems.advanced_condensator_reflector });
 		}
 		
 		// MFSU
@@ -127,7 +136,7 @@ public class WTFIC2AddonRecipes {
 		}
 		
 		if (CommonConfig.recipes.crafting.enableConvertableMFSU) {
-			Recipes.advRecipes.addRecipe(teBlock.getItemStack(mfsu_convertable), new Object[] { "*#*", "#C#", "*#*", '*', teBlock.getItemStack(mfsu_doublecompressed), '#', IC2Items.getItem("lapotron_crystal"), 'C', IC2Items.getItem("crafting", "raw_crystal_memory") });
+			Recipes.advRecipes.addRecipe(teBlock.getItemStack(mfsu_convertable), new Object[] { "*#*", "#C#", "*#*", '*', teBlock.getItemStack(mfsu_doublecompressed), '#', lapotron_crystal.copy(), 'C', IC2Items.getItem("crafting", "raw_crystal_memory") });
 		}
 		
 	}
