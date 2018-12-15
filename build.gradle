@@ -26,6 +26,7 @@ apply plugin: "maven"
 repositories {
     maven { url = "https://repo.u-team.info" }
 	maven { url = "http://maven.ic2.player.to" }
+	maven { url = "http://dvs1.progwml6.com/files/maven" }
 }
 
 getBuildNumber()
@@ -123,6 +124,8 @@ dependencies {
 	compile "info.u-team:u_team_core-${minecraft.version}:${config.uteamcore.version}:dev"
 	compile "net.industrial-craft:industrialcraft-2:2.8.101-ex112:api"
 	deobfCompile "net.industrial-craft:industrialcraft-2:2.8.101-ex112"
+	compile "mezz.jei:jei_1.12.2:4.14.3.237:api"
+	deobfCompile "mezz.jei:jei_1.12.2:4.14.3.237"
 }
 
 processResources {
