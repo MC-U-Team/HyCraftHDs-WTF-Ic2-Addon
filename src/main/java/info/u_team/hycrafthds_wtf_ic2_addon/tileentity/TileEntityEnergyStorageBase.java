@@ -42,6 +42,7 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 		energy.setPacketOutput((int) (output / EnergyNet.instance.getPowerFromTier(type.outputTier)));
 	}
 	
+	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		energy.setDirections(EnumSet.complementOf(EnumSet.of(getFacing())), EnumSet.of(getFacing()));
@@ -82,6 +83,7 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 	public void onGuiClosed(EntityPlayer var1) {
 	}
 	
+	@Override
 	public void setFacing(EnumFacing facing) {
 		super.setFacing(facing);
 		energy.setDirections(EnumSet.complementOf(EnumSet.of(getFacing())), EnumSet.of(getFacing()));
@@ -91,6 +93,7 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 		super.setFacing(facing);
 	}
 	
+	@Override
 	public void onPlaced(ItemStack stack, EntityLivingBase placer, EnumFacing facing) {
 		super.onPlaced(stack, placer, facing);
 		if (!getWorld().isRemote) {
@@ -100,6 +103,7 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 		
 	}
 	
+	@Override
 	protected ItemStack adjustDrop(ItemStack drop, boolean wrench) {
 		drop = super.adjustDrop(drop, wrench);
 		if (teBlock.getDefaultDrop() == DefaultDrop.Self) {
@@ -119,35 +123,43 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 		return drop;
 	}
 	
+	@Override
 	public int getOutput() {
 		return (int) output;
 	}
 	
+	@Override
 	public double getOutputEnergyUnitsPerTick() {
 		return output;
 	}
 	
+	@Override
 	public void setStored(int energy) {
 	}
 	
+	@Override
 	public int addEnergy(int amount) {
 		energy.addEnergy(amount);
 		return amount;
 	}
 	
+	@Override
 	public int getStored() {
 		return (int) energy.getEnergy();
 	}
 	
+	@Override
 	public int getCapacity() {
 		return (int) energy.getCapacity();
 	}
 	
+	@Override
 	public boolean isTeleporterCompatible(EnumFacing side) {
 		return true;
 	}
 	
 	@SideOnly(Side.CLIENT)
+	@Override
 	public void addInformation(ItemStack stack, List<String> tooltip, ITooltipFlag advanced) {
 		super.addInformation(stack, tooltip, advanced);
 		tooltip.add(String.format("%s %s %s %s %s %s", Localization.translate("ic2.item.tooltip.Output"), (long) output, Localization.translate("ic2.generic.text.EUt"), Localization.translate("ic2.item.tooltip.Capacity"), (long) energy.getCapacity(), Localization.translate("ic2.generic.text.EU")));

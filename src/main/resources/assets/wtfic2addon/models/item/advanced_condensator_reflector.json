@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "wtfic2addon:items/advanced_condensator_reflector"
-    }
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "wtfic2addon:items/advanced_condensator_reflector"
+	}
 }

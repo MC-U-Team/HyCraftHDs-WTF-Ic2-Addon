@@ -2,56 +2,115 @@
 	"forge_marker": 1,
 	"variants": {
 		"type": {
-			"solar_panel_low": { "model": "wtfic2addon:solar_panel_low" },
-			"solar_panel_low_active": { "model": "wtfic2addon:solar_panel_low" },
-			
-			"solar_panel_intermediatelow": { "model": "wtfic2addon:solar_panel_intermediatelow" },
-			"solar_panel_intermediatelow_active": { "model": "wtfic2addon:solar_panel_intermediatelow" },
-			
-			"solar_panel_intermediatemedium": { "model": "wtfic2addon:solar_panel_intermediatemedium" },
-			"solar_panel_intermediatemedium_active": { "model": "wtfic2addon:solar_panel_intermediatemedium" },
-			
-			"solar_panel_intermediatehigh": { "model": "wtfic2addon:solar_panel_intermediatehigh" },
-			"solar_panel_intermediatehigh_active": { "model": "wtfic2addon:solar_panel_intermediatehigh" },
-			
-			"solar_panel_advancedlow": { "model": "wtfic2addon:solar_panel_advancedlow" },
-			"solar_panel_advancedlow_active": { "model": "wtfic2addon:solar_panel_advancedlow" },
-			
-			"solar_panel_advancedmedium": { "model": "wtfic2addon:solar_panel_advancedmedium" },
-			"solar_panel_advancedmedium_active": { "model": "wtfic2addon:solar_panel_advancedmedium" },
-			
-			"solar_panel_advancedhigh": { "model": "wtfic2addon:solar_panel_advancedhigh" },
-			"solar_panel_advancedhigh_active": { "model": "wtfic2addon:solar_panel_advancedhigh" },
-			
-			"solar_panel_superior": { "model": "wtfic2addon:solar_panel_superior" },
-			"solar_panel_superior_active": { "model": "wtfic2addon:solar_panel_superior" },
-			
-			"solar_panel_intermediatewtf": { "model": "wtfic2addon:solar_panel_intermediatewtf" },
-			"solar_panel_intermediatewtf_active": { "model": "wtfic2addon:solar_panel_intermediatewtf" },
-			
-			"solar_panel_advancedwtf": { "model": "wtfic2addon:solar_panel_advancedwtf" },
-			"solar_panel_advancedwtf_active": { "model": "wtfic2addon:solar_panel_advancedwtf" },
-			
-			"solar_panel_extremewtf": { "model": "wtfic2addon:solar_panel_extremewtf" },
-			"solar_panel_extremewtf_active": { "model": "wtfic2addon:solar_panel_extremewtf" },
-			
-			"mfsu_compressed": { "model": "wtfic2addon:mfsu_compressed" },
-			"mfsu_doublecompressed": { "model": "wtfic2addon:mfsu_doublecompressed" },
-			"mfsu_triplecompressed": { "model": "wtfic2addon:mfsu_triplecompressed" },
-			"mfsu_quadruplecompressed": { "model": "wtfic2addon:mfsu_quadruplecompressed" },
-			
-			"mfsu_extreme": { "model": "wtfic2addon:mfsu_extreme" },
-			
-			"mfsu_convertable": { "model": "wtfic2addon:mfsu_convertable" }
+			"solar_panel_low": {
+				"model": "wtfic2addon:solar_panel_low"
+			},
+			"solar_panel_low_active": {
+				"model": "wtfic2addon:solar_panel_low"
+			},
+			"solar_panel_intermediatelow": {
+				"model": "wtfic2addon:solar_panel_intermediatelow"
+			},
+			"solar_panel_intermediatelow_active": {
+				"model": "wtfic2addon:solar_panel_intermediatelow"
+			},
+			"solar_panel_intermediatemedium": {
+				"model": "wtfic2addon:solar_panel_intermediatemedium"
+			},
+			"solar_panel_intermediatemedium_active": {
+				"model": "wtfic2addon:solar_panel_intermediatemedium"
+			},
+			"solar_panel_intermediatehigh": {
+				"model": "wtfic2addon:solar_panel_intermediatehigh"
+			},
+			"solar_panel_intermediatehigh_active": {
+				"model": "wtfic2addon:solar_panel_intermediatehigh"
+			},
+			"solar_panel_advancedlow": {
+				"model": "wtfic2addon:solar_panel_advancedlow"
+			},
+			"solar_panel_advancedlow_active": {
+				"model": "wtfic2addon:solar_panel_advancedlow"
+			},
+			"solar_panel_advancedmedium": {
+				"model": "wtfic2addon:solar_panel_advancedmedium"
+			},
+			"solar_panel_advancedmedium_active": {
+				"model": "wtfic2addon:solar_panel_advancedmedium"
+			},
+			"solar_panel_advancedhigh": {
+				"model": "wtfic2addon:solar_panel_advancedhigh"
+			},
+			"solar_panel_advancedhigh_active": {
+				"model": "wtfic2addon:solar_panel_advancedhigh"
+			},
+			"solar_panel_superior": {
+				"model": "wtfic2addon:solar_panel_superior"
+			},
+			"solar_panel_superior_active": {
+				"model": "wtfic2addon:solar_panel_superior"
+			},
+			"solar_panel_intermediatewtf": {
+				"model": "wtfic2addon:solar_panel_intermediatewtf"
+			},
+			"solar_panel_intermediatewtf_active": {
+				"model": "wtfic2addon:solar_panel_intermediatewtf"
+			},
+			"solar_panel_advancedwtf": {
+				"model": "wtfic2addon:solar_panel_advancedwtf"
+			},
+			"solar_panel_advancedwtf_active": {
+				"model": "wtfic2addon:solar_panel_advancedwtf"
+			},
+			"solar_panel_extremewtf": {
+				"model": "wtfic2addon:solar_panel_extremewtf"
+			},
+			"solar_panel_extremewtf_active": {
+				"model": "wtfic2addon:solar_panel_extremewtf"
+			},
+			"mfsu_compressed": {
+				"model": "wtfic2addon:mfsu_compressed"
+			},
+			"mfsu_doublecompressed": {
+				"model": "wtfic2addon:mfsu_doublecompressed"
+			},
+			"mfsu_triplecompressed": {
+				"model": "wtfic2addon:mfsu_triplecompressed"
+			},
+			"mfsu_quadruplecompressed": {
+				"model": "wtfic2addon:mfsu_quadruplecompressed"
+			},
+			"mfsu_extreme": {
+				"model": "wtfic2addon:mfsu_extreme"
+			},
+			"mfsu_convertable": {
+				"model": "wtfic2addon:mfsu_convertable"
+			}
 		},
 		"facing": {
-			"down": { "x": 90 },
-			"up": { "x": 270 },
-			"north": { "transform": "forge:default-block" },
-			"south": { "y": 180 },
-			"west": { "y": 270 },
-			"east": { "y": 90 }
+			"down": {
+				"x": 90
+			},
+			"up": {
+				"x": 270
+			},
+			"north": {
+				"transform": "forge:default-block"
+			},
+			"south": {
+				"y": 180
+			},
+			"west": {
+				"y": 270
+			},
+			"east": {
+				"y": 90
+			}
 		},
-		"inventory": [{}]
+		"inventory": [
+			{
+				
+			}
+		]
 	}
 }

@@ -1,6 +1,6 @@
 package info.u_team.hycrafthds_wtf_ic2_addon.config;
 
-import net.minecraftforge.common.config.Config.*;
+import net.minecraftforge.common.config.Config.Name;
 
 public class ConfigEntrySolarPanel {
 	

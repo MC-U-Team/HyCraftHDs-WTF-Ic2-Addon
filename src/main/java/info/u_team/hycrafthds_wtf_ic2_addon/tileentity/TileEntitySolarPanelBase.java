@@ -185,6 +185,7 @@ public class TileEntitySolarPanelBase extends TileEntityInventory implements IHa
 	}
 	
 	@SideOnly(Side.CLIENT)
+	@Override
 	public void addInformation(ItemStack stack, List<String> tooltip, ITooltipFlag advanced) {
 		super.addInformation(stack, tooltip, advanced);
 		tooltip.add(Localization.translate("ic2.item.tooltip.PowerTier", type.tier));
