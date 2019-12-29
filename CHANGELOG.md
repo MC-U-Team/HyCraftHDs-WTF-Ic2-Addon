@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.12.2-1.0.0.7] - 2019-12-29
+### Changed
+ - Fixed chinese language code
+
 ## [1.12.2-1.0.0.6] - 2019-12-29
 ### Added
  - Added chinese translation (thanks to tucaofeng)
