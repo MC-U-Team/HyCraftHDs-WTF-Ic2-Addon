@@ -1,0 +1,51 @@
+#Created by hycrafthd Translated by TUCAOEVER
+
+#Creative Tab
+itemGroup.wtfic2addon:tab=WTF工业扩展
+
+#Tiles
+wtfic2addon.te.solar_panel_low=低级太阳能发电机
+
+wtfic2addon.te.solar_panel_intermediatelow=中低级太阳能发电机
+wtfic2addon.te.solar_panel_intermediatemedium=中级太阳能发电机
+wtfic2addon.te.solar_panel_intermediatehigh=中高级太阳能发电机
+
+wtfic2addon.te.solar_panel_advancedlow=进阶低级太阳能发电机
+wtfic2addon.te.solar_panel_advancedmedium=进阶中级太阳能发电机
+wtfic2addon.te.solar_panel_advancedhigh=进阶高级太阳能发电机
+
+wtfic2addon.te.solar_panel_superior=高级太阳能发电机
+
+wtfic2addon.te.solar_panel_intermediatewtf=传说级中级太阳能发电机
+wtfic2addon.te.solar_panel_advancedwtf=传说级进阶太阳能发电机
+wtfic2addon.te.solar_panel_extremewtf=§d§k传说级高级太阳能发电机§r
+
+ 
+
+wtfic2addon.te.mfsu_compressed=单倍压缩型MFSU储电箱
+wtfic2addon.te.mfsu_doublecompressed=双倍压缩型MFSU储电箱
+wtfic2addon.te.mfsu_triplecompressed=三倍压缩型MFSU储电箱
+wtfic2addon.te.mfsu_quadruplecompressed=四倍压缩型MFSU储电箱
+
+wtfic2addon.te.mfsu_extreme=§d§k传说级MFSU储电箱§r
+
+wtfic2addon.te.mfsu_convertable=MFSU变压器
+
+#Item
+item.wtfic2addon:advanced_condensator_reflector.name=极端冷凝模块
+item.wtfic2addon:dense_iridium_reinforce_plate.name=致密强化铱板
+
+#Tooltips and Gui
+wtfic2addon:mfsu_convertable.use=接受任意级别的电压, 但是输出的能量等级为 1
+
+wtfic2addon:tooltip.solarpanel.generateDay=白天产能 :
+wtfic2addon:tooltip.solarpanel.generateNight=夜晚产能 :
+
+wtfic2addon:gui.energy=能量
+wtfic2addon:gui.state=状态
+
+wtfic2addon:gui.text.storage=能量: %s EU / %s EU
+wtfic2addon:gui.text.storageLong=能量: %s EU
+wtfic2addon:gui.text.capacity=最大储能: %s EU
+wtfic2addon:gui.text.generate=产能: %s EU/t
+wtfic2addon:gui.text.output=最大输出: %s EU/t
