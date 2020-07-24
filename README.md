@@ -1,4 +1,4 @@
-# hycrafthds-WTF-Ic2-Addon
+# HyCraftHDs-WTF-Ic2-Addon
 
 [
 ![Curseforge Downloads](http://cf.way2muchnoise.eu/useful-backpacks.svg)
