@@ -70,13 +70,13 @@ public class TileEntityEnergyStorageBase extends TileEntityInventory implements 
 	}
 	
 	@Override
-	public InvSlot getInvSlot(String name) {
+	public InvSlot getInventorySlot(String name) {
 		if ("charge".equals(name)) {
 			return chargeSlot;
 		} else if ("discharge".equals(name)) {
 			return dischargeSlot;
 		}
-		return super.getInvSlot(name);
+		return super.getInventorySlot(name);
 	}
 	
 	@Override
