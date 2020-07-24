@@ -41,7 +41,7 @@ repositories {
 }
 
 dependencies {
-  deobfCompile "info.u-team:hycrafthds_wtf_ic2_addon-${config.forge.mcversion}:${config.hycrafthdsswtfic2addon.version}"
+  deobfCompile "info.u-team:hycrafthds_wtf_ic2_addon-${config.forge.mcversion}:${config.wtfic2addon.version}"
 }
 ```
 
