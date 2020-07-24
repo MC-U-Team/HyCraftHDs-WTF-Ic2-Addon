@@ -1,28 +1,28 @@
 # HyCraftHDs-WTF-Ic2-Addon
 
 [
-![Curseforge Downloads](http://cf.way2muchnoise.eu/useful-backpacks.svg)
-![Curseforge Versions](http://cf.way2muchnoise.eu/versions/useful-backpacks.svg)
-](https://www.curseforge.com/minecraft/mc-mods/useful-backpacks)
+![Curseforge Downloads](http://cf.way2muchnoise.eu/hycrafthds-wtf-ic2-addon.svg)
+![Curseforge Versions](http://cf.way2muchnoise.eu/versions/hycrafthds-wtf-ic2-addon.svg)
+](https://www.curseforge.com/minecraft/mc-mods/hycrafthds-wtf-ic2-addon)
 [
 ![Discord](https://img.shields.io/discord/297104769649213441?label=Discord)
 ](https://discordapp.com/invite/QXbWS36)
 
-### This mod adds three new backpacks to the game which enhance your gaming experience.
+### This mod adds some endgame energy things for ic2.
 
-- Download on [curseforge](https://www.curseforge.com/minecraft/mc-mods/useful-backpacks).  
-- Find more information on our [website](https://u-team.info/mods/hycrafthdsswtfic2addon).
+- Download on [curseforge](https://www.curseforge.com/minecraft/mc-mods/hycrafthds-wtf-ic2-addon).  
+- Find more information on our [website](https://u-team.info/mods/wtfic2addon).
 - Updates can be found in the [changelog](CHANGELOG.md).
 
 ### How to build this mod
 
 #### Setup Eclipse
-- ``./gradlew genEclipseRuns eclipse``
+- ``./gradlew setupDecompWorkspace eclipse``
 - Import project as existing workspace
 
 #### Setup IntelliJ IDEA
-- ``./gradlew genIntellijRuns``
-- Import as gradle project
+- ``./gradlew setupDecompWorkspace idea``
+- Import project as existing workspace
 
 #### Build
 - ``./gradlew build``
@@ -30,18 +30,18 @@
 ### How to include this mod
 
 - Repository: [repo.u-team.info](https://repo.u-team.info)
-- Artifact: **info.u-team:hycrafthds_wtf_ic2_addon-${config.forge.mcversion}:${config.hycrafthdsswtfic2addon.version}** 
+- Artifact: **info.u-team:hycrafthds_wtf_ic2_addon-${config.forge.mcversion}:${config.wtfic2addon.version}** 
 - *{config.forge.mcversion}* is the minecraft version.
-- *{config.hycrafthdsswtfic2addon.version}* is the hycrafthdsswtfic2addon version.
+- *{config.wtfic2addon.version}* is the wtfic2addon version.
 
-#### Using in Forge Gradle 3:
+#### Using in Forge Gradle 2.3:
 ```gradle
 repositories {
     maven { url = "https://repo.u-team.info" }
 }
 
 dependencies {
-  compileOnly fg.deobf("info.u-team:hycrafthds_wtf_ic2_addon-${config.forge.mcversion}:${config.hycrafthdsswtfic2addon.version}")
+  deobfCompile "info.u-team:hycrafthds_wtf_ic2_addon-${config.forge.mcversion}:${config.hycrafthdsswtfic2addon.version}"
 }
 ```
 
