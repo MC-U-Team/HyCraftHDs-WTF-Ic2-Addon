@@ -8,7 +8,7 @@ public class WTFIC2AddonConstants {
 	public static final String NAME = "HyCraftHD's WTF Ic2 Addon";
 	public static final String VERSION = "${version}";
 	public static final String MCVERSION = "${mcversion}";
-	public static final String DEPENDENCIES = "required:forge@[14.23.5.2847,);required-after:uteamcore@[2.2.4.107,);required-after:ic2@[2.8.101-ex112,)";
+	public static final String DEPENDENCIES = "required:forge@[14.23.5.2847,);required-after:uteamcore@[2.2.5.147,);required-after:ic2@[2.8.101-ex112,)";
 	public static final String UPDATEURL = "https://api.u-team.info/update/wtfic2addon.json";
 	
 	public static final String COMMONPROXY = "info.u_team.hycrafthds_wtf_ic2_addon.proxy.CommonProxy";
