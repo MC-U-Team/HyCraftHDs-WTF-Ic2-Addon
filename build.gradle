@@ -126,10 +126,10 @@ sourceSets {
 
 dependencies {
 	compile "info.u-team:u_team_core-${minecraft.version}:${config.uteamcore.version}:dev"
-	compile "net.industrial-craft:industrialcraft-2:2.8.101-ex112:api"
-	deobfCompile "net.industrial-craft:industrialcraft-2:2.8.101-ex112"
-	compile "mezz.jei:jei_1.12.2:4.14.3.237:api"
-	deobfCompile "mezz.jei:jei_1.12.2:4.14.3.237"
+	compile "net.industrial-craft:industrialcraft-2:${config.ic2.version}:api"
+	deobfCompile "net.industrial-craft:industrialcraft-2:${config.ic2.version}"
+	compile "mezz.jei:jei_${minecraft.version}:${config.jei.version}:api"
+	deobfCompile "mezz.jei:jei_${minecraft.version}:${config.jei.version}"
 }
 
 processResources {
